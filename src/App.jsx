@@ -1,25 +1,24 @@
-import styled from "@emotion/styled";
-import { Container } from "react-bootstrap";
-import imagenCrpto  from "./img/imagen-criptos.png";
+import styled from '@emotion/styled';
+import { Container } from 'react-bootstrap';
+import imagenCrpto  from './img/imagen-criptos.png';
+import Header from './components/header/Header';
+import Main from './components/main/Main';
 
-const H1 = styled.h1`
-  font-family: 'Lato', sans-serif;
-  color: #fff;
-`;
 
 const Img = styled.img`
-  margin: 5rem auto 0  auto;
+  margin: 2rem auto 0  auto;
   display: block;
 `;
 
 function App() {
   return (
-    <Container>
-      <H1>Desde app</H1>
-      <Img 
-       src={imagenCrpto}
-      />
-    </Container>
+      <Container>
+        <Header/>
+        <Img 
+          src={imagenCrpto}
+        />
+        <Main/>
+      </Container>
   )
 }
 
