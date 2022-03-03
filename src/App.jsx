@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 import imagenCrpto  from './img/imagen-criptos.png';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
+import CriptomonedasProvider from './context/CriptomonedasContext';
+import CotizarProvider from './context/CotizarContext';
 
 
 const Img = styled.img`
@@ -12,13 +14,17 @@ const Img = styled.img`
 
 function App() {
   return (
-      <Container>
-        <Header/>
-        <Img 
-          src={imagenCrpto}
-        />
-        <Main/>
-      </Container>
+    <CotizarProvider>
+      <CriptomonedasProvider>
+        <Container>
+          <Header/>
+          <Img 
+            src={imagenCrpto}
+          />
+          <Main/>
+        </Container>
+      </CriptomonedasProvider>
+    </CotizarProvider>
   )
 }
 

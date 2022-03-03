@@ -1,10 +1,10 @@
-import Axios from 'axios';
+import axios from 'axios';
 
-export const getMonedas = async() => {
+export const getCriptomonedas = async(setCriptomonedas) => {
 
-    const url="https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD";
+    const url="https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=USD";
 
-    const monedas = await Axios.get(url);
-   // setMonedas(monedas.data);
-    console.log(monedas.data);
+    const respuesta = await axios.get(url);
+    setCriptomonedas(respuesta.data.Data);
+   
 }

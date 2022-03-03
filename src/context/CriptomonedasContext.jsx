@@ -1,26 +1,27 @@
 import { createContext, useState, useEffect } from 'react';
-import { getCriptomonedas } from '../services/getCriptomonedas'; 
+import {getCriptomonedas} from '../services/getCriptomonedas';
 
 export const CriptomonedasContext = createContext();
 
-const CategoriasProvider = (props) => {
+const CriptomonedasProvider = (props) => {
 
-    const [categories, setCategories] = useState([]);
+    //datos de la api
+    const [criptomonedas, setCriptomonedas] = useState([]);
 
-    const todoCategories = () => getCategories(setCategories);
+    const todoCriptomonedas = ()=>getCriptomonedas(setCriptomonedas);
 
     useEffect(() => {
-      todoCategories();
+      todoCriptomonedas();
     }, [])
 
     return (
-        <CategoriasContext.Provider
-         value={{categories}}
+        <CriptomonedasContext.Provider
+         value={{criptomonedas}}
         >
           {props.children}
-        </CategoriasContext.Provider>
+        </CriptomonedasContext.Provider>
     )
 
 }
 
-export default CategoriasProvider;
+export default CriptomonedasProvider;
