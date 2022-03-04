@@ -8,6 +8,7 @@ export const getInfoCriptomonedas = async(monedaCripto,setResultado,setVerificac
 
    const respuesta = await axios.get(url);
    setResultado(respuesta.data.DISPLAY[criptomoneda][moneda]);
+
    setVerificacion(true);
    
 }

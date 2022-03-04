@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 
 const H1 = styled.h1`
   font-family: 'Lato', sans-serif;
-  color: #9497ff;
+  //color: #9497ff;
+  color: #fff ;
   margin-top: 3rem;
   font-weight: 700;
   text-align: center;
@@ -11,6 +12,10 @@ const H1 = styled.h1`
 
   @media(min-width:768px){
     font-size: 4rem;
+  }
+
+  @media(min-width: 1140px){
+    margin-bottom: 2rem;
   }
 `;
 

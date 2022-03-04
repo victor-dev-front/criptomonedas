@@ -14,16 +14,15 @@ const CotizarProvider = (props) => {
     
     //verificacion para saber si hay datos en el state resultado
     const [verificacion, setVerificacion] = useState(false);
-    
-    
+
     const todoMoneda = ()=>getInfoCriptomonedas(monedaCripto,setResultado,setVerificacion);
 
     useEffect(() => {
         if(Object.keys(monedaCripto).length > 0){
             todoMoneda();
         }
-       
     }, [monedaCripto])
+
 
     return (
         <CotizarContext.Provider

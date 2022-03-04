@@ -38,13 +38,16 @@ const Precio = styled.p`
 
   @media(min-width: 768px){
    font-size: 2.2rem;
-   
   }
 `;
 
 const Img = styled.img`
   display: block;
   width: 50%;
+
+  @media(min-width: 1140px){
+   margin-right: 10rem;
+  }
  
 `;
 
