@@ -39,6 +39,10 @@ const Button = styled.button`
    font-size: 1.7rem;
    width: 30%;
   }
+
+  @media(min-width: 1140px){
+   width: 70%;
+  }
 `;
 
 const Label = styled.label`
@@ -81,8 +85,7 @@ const Formulario = () => {
                 }
                 return errores;
             }}
-            onSubmit={(values,{resetForm}) => {
-                resetForm();
+            onSubmit={(values) => {
                 setMonedaCripto(values);
             }}
         >

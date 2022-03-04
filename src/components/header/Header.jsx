@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 const H1 = styled.h1`
   font-family: 'Lato', sans-serif;
-  color: #fff;
+  color: #9497ff;
   margin-top: 3rem;
   font-weight: 700;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 
   @media(min-width:768px){
